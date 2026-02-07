@@ -1,0 +1,164 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #cfd8e3; /* abu kebiruan lembut */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* container utama */
+.container {
+  background-color: #e3e8ef; /* bukan putih, abu terang dengan hint biru */
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  width: 420px;
+  transition: all 0.3s ease;
+  border: 1px solid #b0bcc9;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Judul */
+h1 {
+  text-align: center;
+  color: #22313f;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* Label dan input */
+label {
+  display: block;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #b9c5cf;
+  border-radius: 8px;
+  background-color: #f5f7fa; /* lembut abu-putih */
+  color: #2d3436;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #3b82f6;
+  background-color: #eef3f9;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+}
+
+/* Navbar untuk pilihan bunga */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+.navbar button {
+  flex: 1;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar button:hover {
+  background-color: #2563eb;
+  transform: scale(1.03);
+}
+
+.navbar button.active {
+  background-color: #1e40af;
+}
+
+/* Tombol Submit */
+.btn-submit {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.btn-submit:hover {
+  background-color: #16a34a;
+  transform: scale(1.03);
+}
+
+/* Box hasil */
+.result {
+  background-color: #e9edf2; /* sedikit abu kebiruan */
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 25px;
+  border-left: 5px solid #3b82f6;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.result h2 {
+  color: #22313f;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.result p {
+  color: #333;
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+/* Animasi muncul */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .navbar button {
+    font-size: 13px;
+  }
+}
